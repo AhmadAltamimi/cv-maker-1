@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classic CV Template</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        h2 {
+            color: #3498db;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 5px;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .experience-item, .education-item {
+            margin-bottom: 15px;
+        }
+        .experience-item h3, .education-item h3 {
+            margin-bottom: 5px;
+        }
+        ul {
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="cv-template classic-template">
+        <header>
+            <h1><span id="firstName"></span> <span id="lastName"></span></h1>
+            <p id="email"></p>
+            <p id="phone"></p>
+            <p id="address"></p>
+        </header>
+        
+        <section class="section work-experience">
+            <h2 data-i18n="work-experience">Work Experience</h2>
+            <div id="experienceList"></div>
+        </section>
+        
+        <section class="section education">
+            <h2 data-i18n="education">Education</h2>
+            <div id="educationList"></div>
+        </section>
+        
+        <section class="section skills">
+            <h2 data-i18n="skills">Skills</h2>
+            <ul id="skillsList"></ul>
+        </section>
+        
+        <section class="section languages">
+            <h2 data-i18n="languages">Languages</h2>
+            <ul id="languagesList"></ul>
+        </section>
+    </div>
+
+    <script>
+        // This script will be replaced by your main JavaScript file
+        // It's here to demonstrate how you might populate the template
+        document.getElementById('firstName').textContent = 'John';
+        document.getElementById('lastName').textContent = 'Doe';
+        document.getElementById('email').textContent = 'john.doe@example.com';
+        document.getElementById('phone').textContent = '+1 234 567 890';
+        document.getElementById('address').textContent = '123 Main St, City, Country';
+
+        const experienceList = document.getElementById('experienceList');
+        experienceList.innerHTML = `
+            <div class="experience-item">
+                <h3>Software Developer</h3>
+                <p>ABC Company | 2018 - Present</p>
+                <p>Developed and maintained web applications using modern JavaScript frameworks.</p>
+            </div>
+        `;
+
+        const educationList = document.getElementById('educationList');
+        educationList.innerHTML = `
+            <div class="education-item">
+                <h3>Bachelor of Science in Computer Science</h3>
+                <p>XYZ University | 2014 - 2018</p>
+            </div>
+        `;
+
+        const skillsList = document.getElementById('skillsList');
+        skillsList.innerHTML = `
+            <li>JavaScript</li>
+            <li>React</li>
+            <li>Node.js</li>
+            <li>Python</li>
+        `;
+
+        const languagesList = document.getElementById('languagesList');
+        languagesList.innerHTML = `
+            <li>English (Native)</li>
+            <li>Spanish (Fluent)</li>
+            <li>French (Intermediate)</li>
+        `;
+    </script>
+</body>
+</html>

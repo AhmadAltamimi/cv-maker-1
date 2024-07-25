@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern CV Template</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .cv-template {
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            padding: 30px;
+        }
+        header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        .profile-picture {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 30px;
+        }
+        .profile-picture img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .personal-info h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        h2 {
+            color: #3498db;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 5px;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        .experience-item, .education-item {
+            margin-bottom: 20px;
+        }
+        .experience-item h3, .education-item h3 {
+            margin-bottom: 5px;
+            color: #2c3e50;
+        }
+        .skills-languages {
+            display: flex;
+            justify-content: space-between;
+        }
+        .skills, .languages {
+            width: 48%;
+        }
+        ul {
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="cv-template modern-template">
+        <header>
+            <div class="profile-picture">
+                <img id="profileImage" src="https://via.placeholder.com/150" alt="Profile Picture">
+            </div>
+            <div class="personal-info">
+                <h1><span id="firstName"></span> <span id="lastName"></span></h1>
+                <p id="email"></p>
+                <p id="phone"></p>
+                <p id="address"></p>
+            </div>
+        </header>
+        
+        <main>
+            <section class="section work-experience">
+                <h2 data-i18n="work-experience">Work Experience</h2>
+                <div id="experienceList"></div>
+            </section>
+            
+            <section class="section education">
+                <h2 data-i18n="education">Education</h2>
+                <div id="educationList"></div>
+            </section>
+            
+            <div class="skills-languages">
+                <section class="section skills">
+                    <h2 data-i18n="skills">Skills</h2>
+                    <ul id="skillsList"></ul>
+                </section>
+                
+                <section class="section languages">
+                    <h2 data-i18n="languages">Languages</h2>
+                    <ul id="languagesList"></ul>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // This script will be replaced by your main JavaScript file
+        // It's here to demonstrate how you might populate the template
+        document.getElementById('firstName').textContent = 'Jane';
+        document.getElementById('lastName').textContent = 'Smith';
+        document.getElementById('email').textContent = 'jane.smith@example.com';
+        document.getElementById('phone').textContent = '+1 987 654 321';
+        document.getElementById('address').textContent = '456 Elm St, Town, Country';
+
+        const experienceList = document.getElementById('experienceList');
+        experienceList.innerHTML = `
+            <div class="experience-item">
+                <h3>Senior Web Developer</h3>
+                <p>XYZ Tech | 2019 - Present</p>
+                <p>Led a team of developers in creating responsive and accessible web applications.</p>
+            </div>
+        `;
+
+        const educationList = document.getElementById('educationList');
+        educationList.innerHTML = `
+            <div class="education-item">
+                <h3>Master of Science in Web Development</h3>
+                <p>ABC University | 2017 - 2019</p>
+            </div>
+        `;
+
+        const skillsList = document.getElementById('skillsList');
+        skillsList.innerHTML = `
+            <li>HTML5 & CSS3</li>
+            <li>JavaScript (ES6+)</li>
+            <li>React & Vue.js</li>
+            <li>Node.js & Express</li>
+        `;
+
+        const languagesList = document.getElementById('languagesList');
+        languagesList.innerHTML = `
+            <li>English (Native)</li>
+            <li>German (Fluent)</li>
+            <li>Japanese (Intermediate)</li>
+        `;
+    </script>
+</body>
+</html>
