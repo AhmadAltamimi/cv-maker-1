@@ -39,13 +39,5 @@
 4. قم بدفع الفرع (`git push origin feature/AmazingFeature`)
 5. افتح طلب Pull Request
 
-## الترخيص
 
-هذا المشروع مرخص تحت رخصة MIT. انظر ملف `LICENSE` للمزيد من التفاصيل.
-
-## الاتصال
-
-اسم المطور - [@your_twitter](https://twitter.com/your_twitter)
-
-رابط المشروع: [https://github.com/your_username/cv-creator](https://github.com/your_username/cv-creator)"# cv-maker-1" 
 "# cv-maker-1" 
